@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import application.tableview.*?>
+<?import java.net.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1">
+	<!-- TODO Add Nodes -->
+	<TableView fx:id="table" prefHeight="451.0" prefWidth="727.0" styleClass="main-back">
+  <columns>
+    <TableColumn prefWidth="120.0" text="Plan">
+      <cellFactory>
+        <FormattedTableCellFactory />
+      </cellFactory>
+      <cellValueFactory>
+        <PropertyValueFactory property="vfcPlan" />
+      </cellValueFactory>
+    </TableColumn>
+    <TableColumn prefWidth="55.0" text="VFC #">
+      <cellFactory>
+        <FormattedTableCellFactory />
+      </cellFactory>
+      <cellValueFactory>
+        <PropertyValueFactory property="vfcNumber" />
+      </cellValueFactory>
+    </TableColumn>
+    <TableColumn prefWidth="100.0" text="Location">
+      <cellFactory>
+        <FormattedTableCellFactory />
+      </cellFactory>
+      <cellValueFactory>
+        <PropertyValueFactory property="location" />
+      </cellValueFactory>
+    </TableColumn>
+    <TableColumn prefWidth="100.0" text="Arrival">
+      <cellFactory>
+        <FormattedTableCellFactory />
+      </cellFactory>
+      <cellValueFactory>
+        <PropertyValueFactory property="arrivalTime" />
+      </cellValueFactory>
+    </TableColumn>
+    <TableColumn prefWidth="35.0" text="Org">
+      <cellFactory>
+        <FormattedTableCellFactory />
+      </cellFactory>
+      <cellValueFactory>
+        <PropertyValueFactory property="origin" />
+      </cellValueFactory>
+    </TableColumn>
+    <TableColumn prefWidth="35.0" text="Dst">
+      <cellFactory>
+        <FormattedTableCellFactory />
+      </cellFactory>
+      <cellValueFactory>
+        <PropertyValueFactory property="destination" />
+      </cellValueFactory>
+    </TableColumn>
+    <TableColumn prefWidth="65.0" text="Shipments">
+      <cellFactory>
+        <FormattedTableCellFactory />
+      </cellFactory>
+      <cellValueFactory>
+        <PropertyValueFactory property="shipments" />
+      </cellValueFactory>
+    </TableColumn>
+    <TableColumn prefWidth="125.0" text="Consignee">
+      <cellFactory>
+        <FormattedTableCellFactory />
+      </cellFactory>
+      <cellValueFactory>
+        <PropertyValueFactory property="consignee" />
+      </cellValueFactory>
+    </TableColumn>
+    <TableColumn prefWidth="35.0" text="Haz">
+      <cellFactory>
+        <FormattedTableCellFactory />
+      </cellFactory>
+      <cellValueFactory>
+        <PropertyValueFactory property="hazMat" />
+      </cellValueFactory>
+    </TableColumn>
+    <TableColumn prefWidth="45.0" text="Temp">
+      <cellFactory>
+        <FormattedTableCellFactory />
+      </cellFactory>
+      <cellValueFactory>
+        <PropertyValueFactory property="temperature" />
+      </cellValueFactory>
+    </TableColumn>
+  </columns>
+  <items>
+<!-- Sample Data -->
+    <FXCollections fx:factory="observableArrayList">
+      <InboundBean arrivalTime="03-11-13 15:00" consignee="Fred Meyer" destination="ANC" hazMat="N" location="Consignee" origin="TAC" shipments="1" temperature="KFF" vfcNumber="345440" vfcPlan="" />
+      <InboundBean arrivalTime="03-11-13 14:00" consignee="Fred Meyer" destination="ANC" hazMat="N" location="Yard" origin="TAC" shipments="1" temperature="KFF" vfcNumber="123456" vfcPlan="" />
+      <InboundBean arrivalTime="03-11-13 19:00" consignee="Fred Meyer" destination="ANC" hazMat="N" location="Trip 12543" origin="TAC" shipments="1" temperature="KFF" vfcNumber="235555" vfcPlan="Fred Meyer" />
+      <InboundBean arrivalTime="03-12-13 10:00" consignee="Costco" destination="KNA" hazMat="N" location="Trip 551332" origin="TAC" shipments="1" temperature="KFF" vfcNumber="244000" vfcPlan="KNA" />
+      <InboundBean arrivalTime="05-23-13 15:00" consignee="Lowes" destination="ANC" hazMat="N" location="Yard" origin="TAC" shipments="5" temperature="KFF" vfcNumber="123456" vfcPlan="Fred Meyer" />
+      <InboundBean arrivalTime="05-23-13 15:00" consignee="Lowes" destination="ANC" hazMat="N" location="Yard" origin="TAC" shipments="5" temperature="KFF" vfcNumber="123456" vfcPlan="Fred Meyer" />
+      <InboundBean arrivalTime="05-23-13 15:00" consignee="Lowes" destination="ANC" hazMat="N" location="Yard" origin="TAC" shipments="5" temperature="KFF" vfcNumber="123456" vfcPlan="Fred Meyer" />
+    </FXCollections>
+  </items>
+</TableView>
+  <stylesheets>
+    <URL value="@tableview.css" />
+  </stylesheets>
+</AnchorPane>
+
